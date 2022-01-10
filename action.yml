@@ -22,7 +22,7 @@ runs:
       if: steps.nextflow-cache.outputs.cache-hit != 'true'
       shell: bash
       run: |
-        wget -qO- https://get.nextflow.io | bash
+        wget -qO- https://github.com/nextflow-io/nextflow/releases/download/v${{ inputs.version }}/nextflow-v${{ inputs.version }}-all | bash
         sudo mv nextflow /usr/local/bin/
 
 
