@@ -5,7 +5,7 @@
 ## Overview
 Setup Nextflow for GitHub Actions.
 
-Please note, that Nextflow versions are automatically cached.
+Please note, Nextflow versions are automatically cached.
 
 ## Inputs
 
