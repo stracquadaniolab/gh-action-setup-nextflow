@@ -20,6 +20,7 @@ runs:
 
     - name: 'Install Nextflow'
       shell: 'bash {0}'
+      if: steps.nextflow-cache.outputs.cache-hit != 'true'
       run: |
         wget -qO- https://github.com/nextflow-io/nextflow/releases/download/v${{ inputs.version }}/nextflow-${{ inputs.version }}-all | bash
         sudo mv nextflow /usr/local/bin/
