@@ -19,7 +19,6 @@ runs:
         key: ${{ runner.os }}-nextflow-${{ inputs.version }}
 
     - name: 'Install Nextflow'
-      if: steps.nextflow-cache.outputs.cache-hit != 'true'
       shell: bash
       run: |
         wget -qO- https://github.com/nextflow-io/nextflow/releases/download/v${{ inputs.version }}/nextflow-v${{ inputs.version }}-all | bash
