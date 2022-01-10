@@ -19,9 +19,8 @@ runs:
         key: ${{ runner.os }}-nextflow-${{ inputs.version }}
 
     - name: 'Install Nextflow'
-      shell: bash
+      shell: bash -x
       run: |
-        set -x
         wget -qO- https://github.com/nextflow-io/nextflow/releases/download/v${{ inputs.version }}/nextflow-${{ inputs.version }}-all | bash
 
 
