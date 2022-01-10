@@ -1,6 +1,6 @@
 # setup-nextflow
 
-![](https://img.shields.io/badge/current_version-v0.0.0-blue)
+![](https://img.shields.io/badge/current_version-v0.1.0-blue)
 
 ## Overview
 Setup Nextflow for GitHub Actions.
