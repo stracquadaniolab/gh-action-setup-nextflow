@@ -22,7 +22,7 @@ runs:
       if: steps.nextflow-cache.outputs.any_changed != 'true'
       shell: bash
       run: |  
-        curl -s https://github.com/nextflow-io/nextflow/releases/download/v${{ inputs.version }}/nextflow-${{ inputs.version}}-all | bash \
+        wget -qO- https://github.com/nextflow-io/nextflow/releases/download/v${{ inputs.version }}/nextflow-${{ inputs.version}}-all | bash \
         && chmod +x nextflow \
         && sudo mv nextflow /usr/local/bin/
 
