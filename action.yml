@@ -4,7 +4,7 @@ inputs:
   version:
     description: 'Version'
     required: false
-    default: '21.10'
+    default: '21.10.0'
 
 runs:
   using: 'composite'
@@ -22,6 +22,7 @@ runs:
       if: steps.nextflow-cache.outputs.any_changed != 'true'
       shell: bash
       run: |  
+        https://github.com/nextflow-io/nextflow/releases/download/v21.10.6/nextflow-21.10.6-all
         wget -qO- https://github.com/nextflow-io/nextflow/releases/download/v${{ inputs.version }}/nextflow-${{ inputs.version}}-all | bash \
         && chmod +x nextflow \
         && sudo mv nextflow /usr/local/bin/
