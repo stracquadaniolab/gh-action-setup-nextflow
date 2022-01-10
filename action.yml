@@ -22,6 +22,7 @@ runs:
       if: steps.nextflow-cache.outputs.any_changed != 'true'
       shell: bash
       run: |  
-        wget -qO- https://github.com/nextflow-io/nextflow/releases/download/v${{ inputs.version }}/nextflow-${{ inputs.version}}-all | bash 
+        wget -qO- https://github.com/nextflow-io/nextflow/releases/download/v${{ inputs.version }}/nextflow-${{ inputs.version}}-all
+        bash nextflow-${{ inputs.version}}-all
 
 
