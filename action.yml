@@ -23,6 +23,6 @@ runs:
       shell: bash
       run: |  
         wget -qO- https://github.com/nextflow-io/nextflow/releases/download/v${{ inputs.version }}/nextflow-${{ inputs.version}}-all | bash \
-        && chmod +x nextflow \
+        && ls -al
         && sudo mv nextflow /usr/local/bin/
 
