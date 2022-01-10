@@ -11,7 +11,7 @@ Please note, Nextflow versions are automatically cached.
 
 ### `version`
 
-Nextflow version to install. Default: `21.10`.
+Nextflow version to install. Default: `21.10.0`.
 
 ## Example usage
 
