@@ -19,7 +19,7 @@ runs:
         key: ${{ runner.os }}-nextflow-${{ inputs.version }}
 
     - name: 'Install Nextflow'
-      if: steps.nextflow-cache.outputs.any_changed != 'true'
+      if: steps.nextflow-cache.outputs.cache-hit != 'true'
       shell: bash
       run: |
         wget -qO- https://get.nextflow.io | bash
