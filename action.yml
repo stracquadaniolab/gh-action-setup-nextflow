@@ -19,7 +19,7 @@ runs:
         key: ${{ runner.os }}-nextflow-${{ inputs.version }}
 
     - name: 'Install Nextflow'
-      shell: 'bash {0}'
+      shell: 'bash'
       run: |
         wget -qO- https://github.com/nextflow-io/nextflow/releases/download/v${{ inputs.version }}/nextflow | bash
         sudo mv nextflow /usr/local/bin/
