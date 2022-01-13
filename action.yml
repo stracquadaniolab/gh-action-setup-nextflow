@@ -2,7 +2,7 @@ name: 'gh-action-setup-nextflow'
 description: 'A GitHub Action to setup Nextflow.'
 inputs:
   version:
-    description: 'Version'
+    description: 'Nextflow version'
     required: false
     default: '21.10.0'
 
@@ -20,6 +20,7 @@ runs:
 
     - name: 'Install Nextflow'
       shell: 'bash'
+      if: steps.nextflow-cache.outputs.cache-hit != 'true'
       run: |
         wget -qO- https://github.com/nextflow-io/nextflow/releases/download/v${{ inputs.version }}/nextflow | bash
         sudo mv nextflow /usr/local/bin/
